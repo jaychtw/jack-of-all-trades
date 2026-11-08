@@ -1,0 +1,225 @@
+{
+  "upstreamRepository": "https://github.com/patch-gg/pixelfx",
+  "upstreamCommit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+  "rollbackCommit": "337a7af7ffb4a52a22583547f62aea1a35ed7c7d",
+  "upstreamFiles": [
+    {
+      "upstreamPath": "src/core/actor.js",
+      "localPath": "vendor/pixelfx/src/core/actor.js",
+      "sha256": "5c867a24a88e93520d020b77190f12db265eb8fc357136ce3d92de05e19e63c2"
+    },
+    {
+      "upstreamPath": "src/core/rig.js",
+      "localPath": "vendor/pixelfx/src/core/rig.js",
+      "sha256": "5af3f455b18f9feb9f060732fb457529c6c76975a309c72171aa4e88b31aa70c"
+    },
+    {
+      "upstreamPath": "src/core/poses.js",
+      "localPath": "vendor/pixelfx/src/core/poses.js",
+      "sha256": "829f9b59ac883061afb9e952d6b608363ec7678bd00b026c538046685af88139"
+    },
+    {
+      "upstreamPath": "src/core/act.js",
+      "localPath": "vendor/pixelfx/src/core/act.js",
+      "sha256": "b4fdeaf8af30c709748bb221c3b3854cc0438f2ce6c6d99f0324e3b3701b9f71"
+    }
+  ],
+  "hero": "Unmodified upstream posed + poseAt + per-effect act poses, uniform 1.5 display scale; original neutral shell and magenta chest mark.",
+  "orc": "Project-owned fork src/characters/orc-rig.js retains IK, frames, rasterizer and outlining with nonuniform morphology/materials and attached crown, tusks, mantle, cloth and spiked hammer.",
+  "unchangedFiles": [
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "3c911248d529ff8904a877619c006f4500cf68df366b3d975748f325fbab4596"
+    },
+    {
+      "path": "docs/artwork/ARTWORK-MANIFEST.md",
+      "sha256": "0dc277b36f64e414589ae575a882a5ff92fdc3948bc6cda5618ba09d521a2b37"
+    },
+    {
+      "path": "docs/artwork/SHA256SUMS.txt",
+      "sha256": "5ca44998c08c09748d94ef5e74cb5f1806f23dd526ea9b14d9123edaeb22d795"
+    },
+    {
+      "path": "docs/artwork/approved/possibility-card-master.png",
+      "sha256": "b7904df8f703f9a65e48d1ef6782d109ba2f6c4b9027174164b7fd9479c58b63"
+    },
+    {
+      "path": "docs/artwork/approved/title-screen-master.png",
+      "sha256": "5978dac647473dee317aabdb3f6bf6a38f1abd25e2cf65dd115c711df919bdc6"
+    },
+    {
+      "path": "docs/artwork/possibility-card.webp",
+      "sha256": "7549e770d46983b18acdcc19c1b922d7600bcc404fa1f161e691b5e75a33e59a"
+    },
+    {
+      "path": "index.html",
+      "sha256": "455dc1c9ac70e8751017f4aab409b08d5e9889bc4ebb22d6f3ed9534fe9b9dbf"
+    },
+    {
+      "path": "src/audio.js",
+      "sha256": "b84e22778d3f8530f39719a6b6da4099eef534e77d726b1f38bfdd31c4021da1"
+    },
+    {
+      "path": "src/i18n.js",
+      "sha256": "8a4752d6de66276e17d9b479fb66c9fd609d202c25f2724468ed927ed6d16d42"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "9dd90a327c27efe94d98a35a39693fc8ab16e34761fcd011dd980fe20e105b66"
+    },
+    {
+      "path": "src/simulation.js",
+      "sha256": "3b394eb9b4e01e71aebed1a9739c64aef744925a21c61783e7c1ae6f0edb20fb"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "495aa677affd48a832ce9c66297f89fa52f4fc57419a0893d51fb89872a1a92c"
+    },
+    {
+      "path": "vendor/pixelfx/LICENSE",
+      "sha256": "0a77565a50c3462831244452f129c38d2adc4fd07897cbeba8adc943f958604e"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/act.js",
+      "sha256": "b4fdeaf8af30c709748bb221c3b3854cc0438f2ce6c6d99f0324e3b3701b9f71"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/actor.js",
+      "sha256": "5c867a24a88e93520d020b77190f12db265eb8fc357136ce3d92de05e19e63c2"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/chain.js",
+      "sha256": "5014a0eae326f1855f5e320308ad370dbc342d2f1051df3665866401956bfef9"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/color.js",
+      "sha256": "4e63f3074df7c1e138f721959858d12e4f6ccc2bf4f8e98c576efbae51241e54"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/font.js",
+      "sha256": "c094f1d3a9f94478a255f1cc81aa7ccd2c2ba7a97fc1227a29d268acc1f2ec7c"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/fx.js",
+      "sha256": "a959c5f7b1c15ba8e07cb26e5b1ccc0bce0aef54ca14cf01f9d6e794cf4e5a0b"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/index.js",
+      "sha256": "ef5966a6365dbbe8a990867b6c7f3fc61922428e5f2e61262a3a430c119bf02d"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/math.js",
+      "sha256": "da45e1ed43f7d119dd80fbe97c7de2b35b4ea95dea8781671c296ee5942ac0bc"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/painter.js",
+      "sha256": "5b8ada6a25cdf1e63ae3684cc56276c61306558dc0a3a827a6a39ab038f74681"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/particles.js",
+      "sha256": "867e58baf522278b4aad383c7224c599cff9ba93268b5eac9485a39a3809477b"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/poses.js",
+      "sha256": "829f9b59ac883061afb9e952d6b608363ec7678bd00b026c538046685af88139"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/rig.js",
+      "sha256": "5af3f455b18f9feb9f060732fb457529c6c76975a309c72171aa4e88b31aa70c"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/scene.js",
+      "sha256": "520a465f771829162dde114880224eb30efbab3cff859cb8a24a28e49d8e198c"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/shapes.js",
+      "sha256": "3e28f77e25b3083949f083c74304ead6826b7b1da20a658ccb114ab531fc8898"
+    },
+    {
+      "path": "vendor/pixelfx/src/core/sim.js",
+      "sha256": "517febe05b72de9d07e3596c019b9bb01e1f97a74089a30fa80e9e98849ba4b0"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/arcane/_lib.js",
+      "sha256": "08615fc869f6b6a171f630fdccc42696cb14639ec7ccb93bc350130549bcf37a"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/arcane/arcane-beam.js",
+      "sha256": "3f5f058b91221870c8f691efe77d9499229ae0486f826dc59b2a09d74dc0dbaa"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/arcane/spell-charge.js",
+      "sha256": "cc424b77b0b989a8dfc7fae793848c2be0966bde0248a14699ad2733d1e4bec0"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/critters/_lib.js",
+      "sha256": "168a5d6d7a9c68a6b5eacec49226e81516b51da145229b0a6d03422cee090dd7"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/critters/flying-skull.js",
+      "sha256": "f9723ebaf5c73e5287fdcafc46d0cbfcc04d9bddda044962bdea3340c3183966"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/fire/_lib.js",
+      "sha256": "ffa1d5e92b65c7bbac94baa63a0f1dff9feb249c084552ed149876bcf42191da"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/fire/fire-ring.js",
+      "sha256": "6c61ba5dfef87b36c4bb3c8e3b3a10f2d8e40c10f093b0077d623f1bbccca832"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/holy/_lib.js",
+      "sha256": "6768e3763ff7c5d5294308cb92137319a979ff365881dc3b101f3f2a01e6ec27"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/holy/resurrection.js",
+      "sha256": "815062b11a0c5b00505ef71956088ad7436fdb6ba72781e0175027cf653349ca"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/ice/_lib.js",
+      "sha256": "a81ae57b7f90a1e8266cf2f7f6f11dd4551a088220ddeac03d4539dfb40e5782"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/ice/ice-lance.js",
+      "sha256": "4d5168e7ce7a5fc1f37e150c6d8227258962833d47e7b42dcc3da792f2e063a4"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/ice/snowflake-burst.js",
+      "sha256": "7a7820355463f86b0d77e9a60fa52006fb75e994de4d8b0d647c542ce653216c"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/lightning/_lib.js",
+      "sha256": "6fa0eba00e706590865c0cadbcb0c79b07ae934f0f40dbf72426e45b51ccf487"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/lightning/chain-lightning.js",
+      "sha256": "64f6a9ae4a4ede3f6bea6887c8fcddf8d04f88370b262f10161d410bb830bec9"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/melee/sword-slash.js",
+      "sha256": "3abcde4466df41bddd1da0c9c9824aa2450185de39c61c3b7d156272dcc9327a"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/melee/thrust.js",
+      "sha256": "ac2f2257fafb9dec3bdcb8e75020db952e14810c700eea6b232be7b348eb261d"
+    },
+    {
+      "path": "vendor/pixelfx/src/fx/moves/ice-lance-throw.js",
+      "sha256": "bb2329e36623a11c5c33a8cc042e61e98202b3b01e8de2cdbba9d1625aa3a616"
+    }
+  ],
+  "projectDerivative": {
+    "path": "src/characters/orc-rig.js",
+    "sha256": "e9d243e250b0e133cb339302fc2f48845201269d079d94dc9916e58a526af590",
+    "basis": "src/core/rig.js at pinned upstream revision",
+    "newDepthRenderedParts": [
+      "crown",
+      "tusks",
+      "mantle",
+      "cloth",
+      "eyes",
+      "mouth"
+    ],
+    "presentationScale": 2
+  }
+}
