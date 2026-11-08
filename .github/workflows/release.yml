@@ -28,6 +28,18 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run test:browser
+      - name: Exercise the production artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx vite preview --host 127.0.0.1 --port 4173 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/jack-of-all-trades/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/smoke.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

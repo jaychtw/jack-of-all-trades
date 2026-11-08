@@ -39,7 +39,7 @@ export class Renderer{
  for(const x of [14,614]){this.poly([[x-24,323],[x-15,302],[x+22,316],[x+17,338]],'#111827');this.poly([[x-19,320],[x-13,306],[x+19,319],[x+15,330]],'#4e4a58');for(let j=0;j<3;j++)this.poly([[x-15,310+j*5],[x+16,321+j*4],[x+15,323+j*4],[x-16,312+j*5]],'#77707a');}
  this.ctx=original;return b;}
  hero(g,move){const c=this.ctx,t=g.time,a=g.action,age=a?.age??0;let lean=0,arm=0,bob=(!a&&move)?Math.sin(t*16)*1.5:Math.sin(t*3)*.5;
- if(a){const p=Math.min(1,age/a.duration);lean=Math.sin(p*Math.PI)*3;arm=a.key==='j'?Math.sin(p*Math.PI)*12:a.key==='k'?Math.sin(p*Math.PI)*7:4;}
+ if(a){const p=Math.min(1,age/a.duration);lean=Math.sin(p*Math.PI)*3;if(a.key==='1')bob=age<.64?-2:age<1.2?6:1;arm=a.key==='j'?Math.sin(p*Math.PI)*12:a.key==='k'?Math.sin(p*Math.PI)*7:4;}
  c.save();c.translate(Math.round(g.x),Math.round(286+bob));
  const r=(x,y,w,h,col)=>this.rect(x,y,w,h,col);const p=(v,col)=>this.poly(v,col);
  // Independently authored segmented Roman silhouette: articulated boots, lamellar blue steel, crest and waving cape.
@@ -62,13 +62,19 @@ export class Renderer{
  let angle=-1.02;if(a?.key==='j')angle=age<.46?-0.25:age<.7?0:-.8;
  else if(a?.key==='k')angle=age<.55?-2.4:age<.75?.7:-.8;
  else if(a)angle=-.2;
- c.save();c.translate(12+arm,-27);c.rotate(angle);r(-8,-3,12,6,'#273d54');r(-7,-3,10,2,'#b7d3e3');r(1,-3,6,7,'#95b3c8');r(5,-7,3,14,'#e5b868');p([[8,-2],[33,-2],[39,0],[33,2],[8,2]],'#b2d7e9');r(8,-2,25,1,'#f4f5df');c.restore();
+ if(a&&!['j','k'].includes(a.key)){
+ const raised=a.key==='5'||a.key==='1'&&age<.64;
+ const low=a.key==='1'&&age>=.64&&age<1.2;
+ const yy=raised?-47:low?-8:-28;
+ r(-12,yy,5,8,'#799bb6');r(-11,yy,5,3,'#c6dbe6');r(14,yy,6,8,'#799bb6');r(15,yy,5,3,'#dbe5e5');
+ r(-11,yy-2,5,3,'#edbf8e');r(15,yy-2,5,3,'#edbf8e');
+ }else{c.save();c.translate(12+arm,-27);c.rotate(angle);r(-8,-3,12,6,'#273d54');r(-7,-3,10,2,'#b7d3e3');r(1,-3,6,7,'#95b3c8');r(5,-7,3,14,'#e5b868');p([[8,-2],[33,-2],[39,0],[33,2],[8,2]],'#b2d7e9');r(8,-2,25,1,'#f4f5df');c.restore();}
  if(g.time<g.blessedUntil){c.strokeStyle='#f7e2a2';c.lineWidth=1;c.beginPath();c.ellipse(0,-29,23,35,0,0,Math.PI*2);c.stroke();r(-14,-69,28,2,'#ffeebc');}
  if(g.time<g.immuneUntil){r(-16,-32,3,9,'#fff4cc');r(17,-32,3,9,'#fff4cc');}
  c.restore();}
  boss(e,t){const c=this.ctx;c.save();c.translate(Math.round(e.x),286);const r=(...v)=>this.rect(...v),p=(...v)=>this.poly(...v);const wind=e.wind>t,phase=wind?1-(e.wind-t)/.85:0,recover=e.recover>t;const breath=Math.sin(t*3);c.translate(0,Math.round(breath));
  p([[-27,-61],[23,-60],[33,-13],[19,-19],[24,-5],[4,-14],[-23,-11]],'#70283e');
- r(-16,-24,12,22,'#212833');r(6,-24,14,22,'#202733');r(-19,-7,17,8,'#151d28');r(5,-7,20,8,'#151d28');r(-17,-7,13,2,'#82909a');r(8,-7,14,2,'#82909a');
+ const stride=!wind&&!recover?Math.round(Math.sin(t*8)*3):0;c.save();c.translate(stride,0);r(-16,-24,12,22,'#212833');r(6,-24,14,22,'#202733');r(-19,-7,17,8,'#151d28');r(5,-7,20,8,'#151d28');r(-17,-7,13,2,'#82909a');r(8,-7,14,2,'#82909a');c.restore();
  p([[-24,-57],[19,-60],[28,-43],[19,-24],[-21,-25],[-29,-42]],'#15202a');p([[-20,-55],[16,-56],[24,-42],[16,-28],[-18,-28],[-24,-40]],'#4c6441');p([[-18,-52],[0,-55],[8,-43],[0,-32],[-18,-35]],'#75894e');
  r(-22,-28,43,6,'#593c35');r(-6,-30,12,10,'#c1b8a0');r(-4,-28,3,3,'#1c2027');r(2,-28,3,3,'#1c2027');r(-2,-23,5,3,'#77705f');
  // fur mantle and spiked shoulder plates
@@ -82,7 +88,7 @@ export class Renderer{
  c.save();c.translate(-25,-46);c.rotate(wind?-.7-phase*1.7:recover?.7:-.5);r(-9,-3,16,9,'#79944d');r(-25,0,37,5,'#644332');r(-22,0,31,1,'#c69b5a');r(-34,-13,17,26,'#16202b');r(-33,-11,15,22,'#687886');r(-31,-10,10,3,'#a8bac0');r(-31,4,11,5,'#3b4a5e');p([[-34,-11],[-42,-15],[-35,-4]],'#e0ceb1');p([[-33,10],[-40,15],[-33,4]],'#e0ceb1');p([[-21,-13],[-19,-21],[-17,-13]],'#e0ceb1');c.restore();
  if(wind){r(-25,-103,50,3,'#f3bc68');c.fillStyle='#fff0c5';c.font='bold 12px monospace';c.fillText('!',-4,-108);}
  for(let i=0;i<4;i++)r(-18+i*10,-101,8,3,i<e.hp?'#e8be76':'#353341');
- if(e.flash>t){c.strokeStyle='#fff7da';c.strokeRect(-34,-97,69,99);}c.restore();}
+ if(e.flash>t){r(-39,-54,3,15,'#fff1b6');r(34,-55,3,16,'#fff1b6');r(-4,-103,9,2,'#fff1b6');}c.restore();}
  render(g,move=0){const c=this.ctx;c.imageSmoothingEnabled=false;c.drawImage(this.bg,0,0);const t=g.time;
  // portal is independently drawn pixel masonry and rotating concentric sparks
  c.save();c.translate(579,228);for(let i=0;i<24;i++){const a=i*Math.PI/12;this.rect(Math.cos(a)*27-4,Math.sin(a)*57-4,8,9,i%2?'#777080':'#4c4d63');}

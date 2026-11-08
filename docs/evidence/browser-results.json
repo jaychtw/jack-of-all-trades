@@ -62,6 +62,48 @@
   },
   "suites": [
     {
+      "title": "accessibility.spec.js",
+      "file": "accessibility.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "critical title and in-game controls in EN and Traditional Chinese",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2957,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T04:54:15.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d316df4bad39fab891ed-eba61041cfeb4eda944e",
+          "file": "accessibility.spec.js",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "game.spec.js",
       "file": "game.spec.js",
       "column": 0,
@@ -83,12 +125,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4281,
+                  "duration": 4016,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-08T04:53:25.204Z",
+                  "startTime": "2026-11-08T04:54:18.726Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -117,12 +159,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7964,
+                  "duration": 7809,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-08T04:53:29.792Z",
+                  "startTime": "2026-11-08T04:54:22.756Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -151,12 +193,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2165,
+                  "duration": 2107,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-08T04:53:37.784Z",
+                  "startTime": "2026-11-08T04:54:30.582Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -185,12 +227,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2031,
+                  "duration": 2062,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-08T04:53:39.967Z",
+                  "startTime": "2026-11-08T04:54:32.717Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,15 +244,49 @@
           "file": "game.spec.js",
           "line": 136,
           "column": 1
+        },
+        {
+          "title": "unmodified keyboard play completes a wave, then natural defeat and restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32518,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T04:54:34.802Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8739d194ba1dcb8a2e3d-be1ef2ea0fba1cfcea33",
+          "file": "game.spec.js",
+          "line": 162,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-08T04:53:24.343Z",
-    "duration": 17784.346,
-    "expected": 4,
+    "startTime": "2026-11-08T04:54:14.037Z",
+    "duration": 53394.462999999996,
+    "expected": 6,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
