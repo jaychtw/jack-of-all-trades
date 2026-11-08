@@ -1,6 +1,6 @@
 # v1.1.0-rc.1 — Character Reuse and Adaptation
 
-Status: locally verified release candidate; **not deployed**. CI/PR validation is pending. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
+Status: verified release candidate; **not deployed**. [PR #2](https://github.com/jaychtw/jack-of-all-trades/pull/2) is intentionally open. Its Checks tab records CI for the exact candidate commit. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
 
 ## Implementation and source lineage
 
@@ -32,7 +32,9 @@ PASS: original artwork hashes. Production build identifies v1.1.0-rc.1. Native b
 
 PASS: public build still identifies unchanged v1.0 rollback source (`evidence/public-v1-unchanged.json`). No merge, publication or Possibility update was performed.
 
-Pending: PR/CI validation and final clean packaged RC; source has been safely checkpointed on the v1.1 branch.
+Sources and evidence are safely checkpointed on `v1.1/character-reuse`; the PR runs the existing full CI validation and production-artifact smoke without deploying. Reproduce with Node 24: `npm ci`, `npm test`, `npm run build`, `npm run test:browser` (installed Chromium or `CHROMIUM_PATH`). `dist/build-info.json` records the exact built SHA, dirty state and RC version; a final delivery ZIP is produced only from a clean checkout. Unit output is in `evidence/unit-results.txt`.
+
+To reproduce the recording with the environment's already installed system ffmpeg: create `<task-cache>/ffmpeg-1011/ffmpeg-linux` as a symlink to that binary, then `PLAYWRIGHT_BROWSERS_PATH=<task-cache> node scripts/v11-record.mjs` with the dev server running. No dependency download, paid service, source artwork regeneration or runtime network is needed.
 
 Not Verified: physical devices, independent first-time player, human aesthetic or assistive-technology review. Canvas remains without full nonvisual combat support, as in v1.0. No human approval of the candidate's rendered appearance is claimed.
 

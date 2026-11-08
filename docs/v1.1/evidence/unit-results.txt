@@ -1,0 +1,46 @@
+
+> jack-of-all-trades@1.1.0-rc.1 test
+> node --test tests/*.test.js
+
+✔ actual original actor, rig, poses and act bytes retain immutable upstream identity (2.065547ms)
+✔ hero uses exact upstream pose pixels, proportions and palette across all actions (56.707875ms)
+✔ both IK systems articulate real bone joints; every ability has changing character frames (24.618833ms)
+✔ Orc is a nonuniform anatomical derivative with visible distinct body parts (54.928199ms)
+✔ king windup and full two-second recovery are sampled from unchanged simulation clocks (9.396957ms)
+✔ unmodified upstream solver, bone frames, depth rasterizer and act cache remain in king derivative (0.547606ms)
+✔ all protected v1.0 runtime, artwork, effects, gameplay and UI source files remain byte-identical (25.866366ms)
+✔ posed hammer head geometrically overlaps the unchanged near/mid/far strike area (30.239326ms)
+✔ five skulls two seconds apart, king after deaths only, identical repeat (12.220435ms)
+✔ hero and enemies cannot cross even with large steps; left boundary (7.230963ms)
+✔ actual contact, location stop one second, global overlapping immunity (0.333646ms)
+✔ boss windup at contact, 2 damage at impact, full two-second recovery (0.928445ms)
+✔ hammer only strikes geometric range; moving away avoids it (0.269824ms)
+✔ 1: casts without target, roots all action, ignores input without queue (0.707832ms)
+✔ 2: casts without target, roots all action, ignores input without queue (0.503485ms)
+✔ 3: casts without target, roots all action, ignores input without queue (0.197584ms)
+✔ 4: casts without target, roots all action, ignores input without queue (0.323831ms)
+✔ 5: casts without target, roots all action, ignores input without queue (0.371341ms)
+✔ j: casts without target, roots all action, ignores input without queue (0.742376ms)
+✔ k: casts without target, roots all action, ignores input without queue (0.173679ms)
+✔ light/heavy forward meaningful hitboxes and one hit per action (0.714142ms)
+✔ fire damages every overlapping AoE enemy once (1.520958ms)
+✔ ice stops at first swept collision and cannot pierce (1.221707ms)
+✔ chain chooses maximum three distinct nearest valid targets (0.666316ms)
+✔ beam waits >=3 seconds and evaluates positions at final moment (0.553756ms)
+✔ Blessing five seconds from pressing, ~1sec root; refresh no stacking (1.038189ms)
+✔ all clocks freeze while paused, no spawn/attack/recovery catch-up (0.218843ms)
+✔ death saves once, restart clears transient state (0.322174ms)
+✔ local best associated stats, settings, ties, malformed/blocked storage (0.546212ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 373.042162
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
