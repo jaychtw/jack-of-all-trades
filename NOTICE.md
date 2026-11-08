@@ -1,0 +1,11 @@
+# Source and artwork provenance
+
+The controlling contract is docs/GDD-FINAL.md, approved 2026-11-08 Asia/Taipei. Adopted AICP 2.1.1 / UGDS 2.0.0 immutable source: https://github.com/jaychtw/game-development-standards/tree/61c24205f437826f1fc901f1741c49b677502f66 . No shared standard is modified.
+
+PixelFX source: https://github.com/patch-gg/pixelfx/tree/a84159688af3ca37a4be05a0d422b94451b2e24e (0.3.0), MIT, Copyright 2026 Patch and Hugo Duprez. Selected transitive source files are retained in vendor/pixelfx/src with original source-level Sprite Fusion notices intact, alongside the complete MIT license. The separate gallery Patch Pixel font is excluded; all UI uses system fonts. Vendored core/font.js is the MIT procedural tiny bitmap data, not the excluded gallery font.
+
+Direct integration: melee/thrust, melee/sword-slash, fire/fire-ring, moves/ice-lance-throw (charge/lance/burst sequence), lightning/chain-lightning, arcane/arcane-beam, holy/resurrection, critters/flying-skull. Modified chain accepts actual target coordinates; beam accepts its geometry length. Resurrection is time-compressed 4.8:1 into Blessing with a mask derived from the original game hero. The ice composed move supplies reference timing and source components; projectile collision and position replace the fixed gallery target. Rig/act metadata was inspected for acted windup, impact and recovery; custom Roman and crowned warhammer sprites are independently authored procedural segmented pixel art in src/render.js, rather than stock actor recolors. The background is original deterministic pixel geometry. These sources render at runtime: no opaque baking pipeline or missing export step.
+
+Music and effects are original local Web Audio synthesis in src/audio.js. No audio downloads, services or runtime network are used. Source code and original procedural graphics/audio are under LICENSE (MIT); the original owner-supplied approved promotional PNG artwork is excluded from that code license, retained for this authorized project and portfolio publication only. No blanket third-party rights claim is made for the artwork.
+
+Exact original artwork identity: docs/artwork/ARTWORK-MANIFEST.md and SHA256SUMS.txt. The repository contains the unmodified original PNG bytes. The card WebP derivative is made by scripts/cover.mjs without cropping, resizing or enlargement.

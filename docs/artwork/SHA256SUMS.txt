@@ -1,0 +1,2 @@
+b7904df8f703f9a65e48d1ef6782d109ba2f6c4b9027174164b7fd9479c58b63  docs/artwork/approved/possibility-card-master.png
+5978dac647473dee317aabdb3f6bf6a38f1abd25e2cf65dd115c711df919bdc6  docs/artwork/approved/title-screen-master.png
