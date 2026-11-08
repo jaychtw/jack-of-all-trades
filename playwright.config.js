@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/browser',workers:1,use:{baseURL:process.env.GAME_URL||'http://127.0.0.1:5173/jack-of-all-trades/',viewport:{width:1280,height:720},launchOptions:{executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']},headless:true},reporter:[['list'],['json',{outputFile:'docs/evidence/browser-results.json'}]],webServer:process.env.GAME_URL?undefined:{command:'npm run dev -- --port 5173',url:'http://127.0.0.1:5173/jack-of-all-trades/',reuseExistingServer:true}});

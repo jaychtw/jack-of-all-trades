@@ -1,0 +1,22 @@
+[
+  {
+    "state": "title",
+    "locale": "en",
+    "violations": []
+  },
+  {
+    "state": "title",
+    "locale": "zh-TW",
+    "violations": []
+  },
+  {
+    "state": "arena",
+    "locale": "zh-TW",
+    "violations": []
+  },
+  {
+    "state": "arena",
+    "locale": "en",
+    "violations": []
+  }
+]
