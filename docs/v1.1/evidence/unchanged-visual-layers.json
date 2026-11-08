@@ -1,0 +1,46 @@
+{
+  "backgroundChangedChannels": 0,
+  "cases": [
+    {
+      "key": "scene",
+      "age": 0,
+      "changedChannels": 0
+    },
+    {
+      "key": "j",
+      "age": 0.54,
+      "changedChannels": 0
+    },
+    {
+      "key": "k",
+      "age": 0.64,
+      "changedChannels": 0
+    },
+    {
+      "key": "1",
+      "age": 1.1,
+      "changedChannels": 0
+    },
+    {
+      "key": "2",
+      "age": 1.5,
+      "changedChannels": 0
+    },
+    {
+      "key": "3",
+      "age": 0.8,
+      "changedChannels": 0
+    },
+    {
+      "key": "4",
+      "age": 2.5,
+      "changedChannels": 0
+    },
+    {
+      "key": "5",
+      "age": 0.4,
+      "changedChannels": 0
+    }
+  ],
+  "blessingMask": "Fixed to v1.0 only during isolation; candidate uses its original demo-derived character mask in gameplay."
+}

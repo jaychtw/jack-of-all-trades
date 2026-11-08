@@ -1,6 +1,6 @@
 # v1.1.0-rc.1 — Character Reuse and Adaptation
 
-Status: implementation and verification in progress; **not deployed**. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
+Status: locally verified release candidate; **not deployed**. CI/PR validation is pending. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
 
 ## Implementation and source lineage
 
@@ -24,7 +24,15 @@ PASS: deterministic browser comparison: background, portal/scenery/skull layer a
 
 PASS: native upstream/v1.0/candidate browser comparison and six-frame acting sequences for both swords, all five spells, and king wind-up/impact/recovery. Images are actual rig/renderer output, not generated illustrations. The top comparison presents upstream/candidate native pixels at 3× and v1.0 actors at comparable body height; full-arena frames preserve real gameplay display scales.
 
-Pending: final complete browser regression, production-artifact smoke, CI/PR and packaged RC. Results will be updated after execution.
+PASS: complete eight-group Chromium suite, including existing bilingual title/HUD accessibility, keyboard play through a full five-skull/king wave, natural defeat/restart, pause reconciliation, mobile real touchStart/hold/touchCancel, portrait guidance/reduced motion, audio/storage/fullscreen-denial fallbacks, plus new character comparisons and unchanged-layer checks. The browser report is `evidence/browser-results.json`; actual new-character encounter/mobile/pause/results images are under `evidence/regression/`.
+
+PASS: local production artifact START/sword/beam/pause/natural defeat/restart/Chinese/mute smoke, without a development mutation hook, broken resources or third-party runtime requests (`evidence/regression/production-smoke.json`).
+
+PASS: original artwork hashes. Production build identifies v1.1.0-rc.1. Native body/posing and full-arena images were visually inspected against the pinned PixelFX source. The 28-second real browser recording `evidence/character-acting.webm` covers the two swords/five spells and a king wind-up/impact/recovery cycle; it uses controlled initial enemies/spawn schedule through the existing development inspector, with ordinary input/clock/action serialization thereafter. The separate natural-wave test does not mutate simulation state.
+
+PASS: public build still identifies unchanged v1.0 rollback source (`evidence/public-v1-unchanged.json`). No merge, publication or Possibility update was performed.
+
+Pending: PR/CI validation and final clean packaged RC; source has been safely checkpointed on the v1.1 branch.
 
 Not Verified: physical devices, independent first-time player, human aesthetic or assistive-technology review. Canvas remains without full nonvisual combat support, as in v1.0. No human approval of the candidate's rendered appearance is claimed.
 

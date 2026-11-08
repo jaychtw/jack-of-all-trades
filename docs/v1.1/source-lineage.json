@@ -207,5 +207,19 @@
       "path": "vendor/pixelfx/src/fx/moves/ice-lance-throw.js",
       "sha256": "bb2329e36623a11c5c33a8cc042e61e98202b3b01e8de2cdbba9d1625aa3a616"
     }
-  ]
+  ],
+  "projectDerivative": {
+    "path": "src/characters/orc-rig.js",
+    "sha256": "e9d243e250b0e133cb339302fc2f48845201269d079d94dc9916e58a526af590",
+    "basis": "src/core/rig.js at pinned upstream revision",
+    "newDepthRenderedParts": [
+      "crown",
+      "tusks",
+      "mantle",
+      "cloth",
+      "eyes",
+      "mouth"
+    ],
+    "presentationScale": 2
+  }
 }
