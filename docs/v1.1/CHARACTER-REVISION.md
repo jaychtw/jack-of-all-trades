@@ -1,5 +1,7 @@
 # v1.1 Character Reuse and Adaptation — scoped owner amendment
 
+Publication update, November 8, 2026: the owner subsequently authorized republishing the game. See PUBLICATION-AUTHORIZATION.md. The original RC-only publication restriction below is superseded for this one game release; all character scope and other exclusions remain unchanged.
+
 Authority: owner's explicit v1.1 assignment in this project conversation, November 8, 2026 (Asia/Taipei). This supersedes only the runtime hero and Orc King character-design requirements in docs/GDD-FINAL.md. All gameplay, other artwork, scene, effects, HUD, language, audio and responsive requirements remain frozen. Adopted AICP 2.1.1 / UGDS 2.0.0 remain pinned to `61c24205f437826f1fc901f1741c49b677502f66`.
 
 - Hero must be the actual PixelFX demonstration character, using its original construction, proportions, skeleton/posing and acted-animation system. No Roman helmet, cape or blue armor customization, static image or simplified drawing.

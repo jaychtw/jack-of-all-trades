@@ -1,6 +1,6 @@
-# v1.1.0-rc.1 — Character Reuse and Adaptation
+# v1.1.0 — promotion of the verified Character Reuse candidate
 
-Status: verified release candidate; **not deployed**. [PR #2](https://github.com/jaychtw/jack-of-all-trades/pull/2) is intentionally open. Its Checks tab records CI for the exact candidate commit. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
+Status: verified candidate promoted to release version metadata 1.1.0 under subsequent owner publication authorization. The character implementation is identical to reviewed RC commit `4da053320d957951ebb290572bc727eaf7550bbf`. See PUBLICATION-AUTHORIZATION.md. [PR #2](https://github.com/jaychtw/jack-of-all-trades/pull/2) records exact-source checks and merge; the Pages Actions run and live verification determine publication status. Authoritative scope: CHARACTER-REVISION.md. Rollback: released v1.0 `337a7af7ffb4a52a22583547f62aea1a35ed7c7d`.
 
 ## Implementation and source lineage
 
@@ -40,4 +40,4 @@ Not Verified: physical devices, independent first-time player, human aesthetic o
 
 ## Publication boundary
 
-This PR must remain unmerged into main until separate release authorization. The existing main deployment workflow is unchanged. The production site must continue to identify the v1.0 rollback SHA; no v1.1 workflow dispatch or public deployment is performed. Possibility is untouched.
+The owner subsequently supplied separate release authorization (PUBLICATION-AUTHORIZATION.md). Normal protected-branch merging and the unchanged main-only deployment workflow may now publish this one v1.1 game release. The initial RC evidence above predates deployment and remains a historical observation, not a claim that v1.0 must stay live after authorization. Possibility remains untouched.
